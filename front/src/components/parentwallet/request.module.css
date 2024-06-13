@@ -1,0 +1,177 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 70px) !important;
+}
+
+.themetext {
+  font-size: 32px;
+  color: #2f2f36;
+  font-weight: bold;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  margin-right: 390px;
+}
+
+.image {
+  margin-bottom: 5px;
+}
+
+.main1 {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 5px 0px 25px 0px;
+}
+
+.horizontal {
+  display: flex;
+  align-items: center;
+}
+
+.mybank {
+  font-size: 17px;
+  color: #84849f;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.myaccount {
+  font-size: 18px;
+  color: #84849f;
+}
+
+.balance {
+  font-size: 30px;
+  color: #585865;
+  font-weight: 600;
+}
+
+.won {
+  font-size: 27px;
+  color: #585865;
+  font-weight: 600;
+}
+
+.main2 {
+  max-height: 380px;
+  overflow-y: auto;
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.filter {
+  margin-right: 350px;
+  margin-top: 10px;
+}
+
+.accountcontent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  justify-content: space-between; /* 항목들을 양끝으로 정렬 */
+  width: 100%; /* 부모 컨테이너의 전체 너비 사용 */
+}
+
+.date {
+  color: #585865;
+  width: 100%; /* 날짜가 상단에 단독으로 위치하도록 너비 설정 */
+}
+
+.subdetail1,
+.subdetail2 {
+  flex-grow: 1; /* 사용 가능한 공간을 채우도록 함 */
+}
+
+.sub2text1,
+.sub2text2,
+.sub2text3 {
+  text-align: right; /* 글자를 오른쪽 정렬 */
+}
+
+/* 이미지를 포함한 detail 컨테이너가 양끝으로 정렬되도록 함 */
+.detail > img {
+  flex-shrink: 0; /* 이미지 크기가 변하지 않도록 함 */
+}
+
+.subdetail1 {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sub1text1 {
+  color: #585865;
+  font-weight: bold;
+  padding-bottom: 6px;
+  font-size: 17px;
+}
+
+.sub1text2 {
+  color: #585865;
+  font-size: 15px;
+}
+
+.subdetail2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 170px;
+}
+
+.sub2text1 {
+  color: #585865;
+  font-weight: bold;
+  font-size: 17px;
+  padding-bottom: 6px;
+}
+
+.sub2text2 {
+  color: #585865;
+  font-size: 17px;
+  font-weight: bold;
+  color: blue;
+  cursor: pointer;
+}
+
+.sendButton {
+  text-align: right;
+  cursor: pointer;
+  color: blue;
+}
+
+.sub2text3 {
+  font-size: 14px;
+  color: #585865;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* 스크롤바 너비 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc; /* 스크롤바 색상 */
+  border-radius: 4px; /* 스크롤바 둥글게 */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* 스크롤바 배경 색상 */
+}

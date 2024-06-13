@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  padding-top: 100px;
+}
+
+.walletTitle {
+  position: absolute;
+  top: 10.5%;
+  left: 16%;
+}
+
+.navigatetext {
+  font-size: 20px;
+}
+
+@media (max-width: 1300px) {
+  .walletTitle {
+    left: 7%;
+  }
+}
+
+@media (max-width: 1060px) {
+  .walletTitle {
+    display: none;
+  }
+}
+
+.walletTitle2 {
+  display: none;
+}
+
+@media (max-width: 899px) {
+  .walletTitle2 {
+    display: block;
+    position: absolute;
+    top: 0.5%;
+    margin-right: 480px;
+  }
+}
+
+.materialContainer {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #202632;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+
+.text {
+  padding-top: 60px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main1 {
+  padding-bottom: 10px;
+  font-size: 30px;
+}
+
+.main2 {
+  padding-bottom: 35px;
+  font-size: 30px;
+}
+
+.sub {
+  font-size: 20px;
+  padding-bottom: 45px;
+}
+
+.icon {
+  padding-bottom: 40px;
+}
+
+.numberfourth {
+  padding-bottom: 20px;
+}

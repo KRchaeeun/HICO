@@ -1,0 +1,303 @@
+/* 구글 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap');
+html,
+body {
+  overflow: hidden; /* 스크롤을 숨김 */
+  height: 100%; /* 전체 높이를 차지하도록 설정 */
+}
+body {
+  background-image: url('../../assets/QuizComponent.png');
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* 스크롤이 생겨도 배경 고정 */
+  height: 100%;
+  margin: 0;
+}
+
+.main {
+  display: flex; /* Flexbox 레이아웃 사용 */
+  justify-content: center; /* 수평 방향 가운데 정렬 */
+}
+
+.mainContainer {
+  /* border: 1px solid black;  */
+  position: relative;
+  margin: 100px 200px 100px 200px;
+}
+
+.characterImage {
+  width: 220px;
+  height: auto;
+  position: absolute;
+  top: -95px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.questionBackground {
+  background-color: #b0ebff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  margin-top: 6vh;
+}
+
+.questionContainer {
+  background-color: #f4fcff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  width: 60vw;
+}
+
+.starContainer {
+  display: flex; /* Flex 컨테이너로 설정 */
+  flex-direction: row; /* 아이템들을 가로로 나열 (이는 display: flex의 기본값이므로 생략 가능) */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+}
+
+.question {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #404049;
+}
+
+.point {
+  text-align: right;
+  /* font-family: 'Just Me Again Down Here'; */
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #d6d6dd;
+}
+
+/* OX 스타일 */
+
+.que {
+  display: flex;
+  justify-content: space-between; /* 양쪽 끝으로 요소를 분리하여 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  width: 100%; /* 컨테이너의 너비를 부모의 전체 너비로 설정 */
+}
+
+.oxContainer {
+  display: flex;
+  margin-top: 70px;
+  justify-content: center;
+  gap: 20vw;
+}
+
+.trueContainer,
+.falseContainer {
+  width: 250px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.trueContainer:hover{
+  background-color: #0064ff; /* 마우스 호버 시 배경색 */
+  color: white;
+
+}
+
+.falseContainer:hover{
+  background-color: #ff4343; /* 마우스 호버 시 배경색 */
+  color: white;
+}
+
+.trueButton,
+.falseButton {
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 90px;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+.trueButton:hover{
+  color: white;
+}
+
+
+.falseButton:hover{
+  color: white;
+}
+
+/* 추가된 스타일 */
+.selected {
+  background-color: #fb88b4; /* 선택된 버튼의 새 배경색 */
+  color: white !important;
+}
+/* 객관식 스타일 */
+
+.answerContainer {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 한 줄에 2개의 열 */
+  gap: 20px;
+}
+
+.choiceButton {
+  font-size: 30px;
+  border-radius: 10px;
+  width: auto;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+.choiceButton:hover {
+  background-color: blue; /* 마우스를 올렸을 때의 배경색 */
+  color: white;
+}
+
+.choiceNumber {
+  margin-left: 30px;
+  width: 50px; /* 선택지 번호 원의 너비 */
+  height: 50px; /* 선택지 번호 원의 높이 */
+  border-radius: 50%; /* 선택지 번호 원을 동그랗게 만듦 */
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Itim';
+  font-weight: bold;
+}
+
+.choiceText {
+  flex-grow: 1;
+}
+
+/* 가장 아래 이동 버튼 */
+
+.buttonContainer {
+  display: flex;
+  position: absolute;
+  justify-content: space-between; /* 버튼을 양 끝으로 정렬 */
+  padding: 10px; /* 적당한 여백 제공 */
+  margin-bottom: 0;
+  top: 40%;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.backButton {
+  border: none; /* 기본 테두리 제거 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* 마우스 오버 시 커서 변경 */
+  width: 100px; /* 버튼의 너비 설정 */
+  height: 100px; /* 버튼의 높이 설정 */
+  background-color: transparent;
+
+  margin-left: 70px;
+}
+.backButton img:hover,
+.frontButton img:hover {
+  transform: scale(1.1);
+}
+
+.frontButton {
+  /* margin-top: auto; */
+  border: none; /* 기본 테두리 제거 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* 마우스 오버 시 커서 변경 */
+  width: 100px; /* 버튼의 너비 설정 */
+  height: 100px; /* 버튼의 높이 설정 */
+  background-color: transparent;
+
+  margin-right: 70px;
+}
+
+.textfield {
+  margin-top: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitButton {
+  width: 6vw;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-left: 20px;
+  background-color: #0064ff; /* 배경색을 파란색으로 설정 */
+  color: white; /* 글씨 색을 하얀색으로 설정 */
+  font-weight: bold;
+  border: none; /* 버튼의 테두리를 제거 (선택적) */
+  cursor: pointer; /* 마우스를 버튼 위에 올렸을 때 손가락 모양으로 변경 (선택적) */
+}
+
+.inputfield {
+  width: 30vw;
+  height: 50px;
+  font-size: 20px;
+  padding-left: 10px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+/* 이전 버튼 스타일 */
+.previousButtonContainer {
+  position: fixed; /* 고정 위치 */
+  left: 0; /* 화면 왼쪽 */
+  bottom: 0; /* 화면 하단 */
+  border-radius: 0% 50% 0% 0%;
+}
+
+/* 다음 버튼 스타일 */
+.nextButtonContainer {
+  position: fixed; /* 고정 위치 */
+  right: 0; /* 화면 오른쪽 */
+  bottom: 0; /* 화면 하단 */
+  border-radius: 50% 0% 0% 0%;
+}
+
+.previousButtonContainer,
+.nextButtonContainer {
+  cursor: pointer; /* 항상 손 모양 커서를 사용 */
+  transition: transform 0.3s ease; /* 부드러운 변환 효과 */
+}
+
+/* 이미지 사이즈 조절을 위한 기본 스타일 */
+.imgsize {
+  width: 16vh;
+  transition: transform 0.3s ease; /* 호버 시 부드러운 확대 효과 */
+}
+
+/* 호버 효과 */
+.previousButtonContainer:hover .imgsize,
+.nextButtonContainer:hover .imgsize {
+  transform: scale(1.1); /* 이미지를 10% 확대 */
+}
+
+/* 비활성화 상태일 때 커서와 호버 효과 조정 */
+.disabledButton {
+  cursor: default !important; /* 비활성화 상태에서는 기본 커서 사용 */
+}
+
+.disabledButton .imgsize {
+  transform: none !important; /* 비활성화 상태에서는 이미지 확대 제거 */
+}

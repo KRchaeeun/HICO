@@ -1,0 +1,150 @@
+.backgroundIMG {
+  background-image: url('../../assets/back.png');
+  background-size: 100%;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.preload-images {
+  display: none; /* 화면에 표시되지 않도록 설정 */
+}
+
+.preload-images img {
+  display: none; /* 이미지도 화면에 표시되지 않도록 설정 */
+}
+
+/* 작은 화면 (모바일) */
+@media (max-width: 600px) {
+  .backgroundIMG {
+    height: 50vh; /* 모바일에서는 높이를 줄입니다. */
+  }
+}
+
+/* 중간 크기 화면 (태블릿) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .backgroundIMG {
+    height: 75vh; /* 태블릿에서는 높이를 조금 더 줍니다. */
+  }
+}
+
+.navbar {
+  padding-top: 10px;
+}
+
+.tag {
+  width: 90px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.782);
+  text-align: center;
+  padding: 10px 15px 10px 15px;
+  font-size: 24px;
+  color: #585865;
+  font-weight: bold;
+  border-radius: 15px;
+}
+
+.tag1 {
+  width: 90px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.782);
+  text-align: center;
+  padding: 15px 15px;
+  font-size: 22px;
+  color: #585865;
+  font-weight: bold;
+  border-radius: 15px;
+  padding-bottom: 28px;
+}
+
+.usapin {
+  /* background-image: url('../../assets/usapin.png'); */
+  position: absolute;
+  top: 21%; /* 상위 요소(.backgroundIMG) 내에서의 상대적 위치 */
+  left: 27.8%; /* 상위 요소(.backgroundIMG) 내에서의 상대적 위치 */
+  width: 200px; /* 버튼 크기 */
+  height: 100px; /* 버튼 크기 */
+  background-size: cover; /* 이미지가 버튼 크기에 맞게 조정됩니다 */
+  background-position: center; /* 이미지가 버튼의 중앙에 위치하도록 조정됩니다 */
+  border: none; /* 표준 버튼 테두리 제거 */
+  cursor: pointer; /* 마우스 오버 시 커서 변경 */
+  outline: none; /* 클릭 시 생기는 외곽선 제거 */
+}
+
+.italypin {
+  /* background-image: url('../../assets/italypin.png'); */
+  position: absolute;
+  top: 27%;
+  left: 47%;
+  width: 90px;
+  height: 88px;
+  background-size: cover; /* 이미지가 버튼 크기에 맞게 조정됩니다 */
+  background-position: center; /* 이미지가 버튼의 중앙에 위치하도록 조정됩니다 */
+  border: none; /* 표준 버튼 테두리 제거 */
+  cursor: pointer; /* 마우스 오버 시 커서 변경 */
+  outline: none; /* 클릭 시 생기는 외곽선 제거 */
+}
+.japanpin {
+  /* background-image: url('../../assets/sakura.png'); */
+  position: absolute;
+  top: 26.5%;
+  right: 23.2%;
+  width: 90px;
+  height: 88px;
+  background-size: cover; /* 이미지가 버튼 크기에 맞게 조정됩니다 */
+  background-position: center; /* 이미지가 버튼의 중앙에 위치하도록 조정됩니다 */
+  border: none; /* 표준 버튼 테두리 제거 */
+  cursor: pointer; /* 마우스 오버 시 커서 변경 */
+  outline: none; /* 클릭 시 생기는 외곽선 제거 */
+}
+.chinapin {
+  /* background-image: url('../../assets/chinapin.png'); */
+  position: absolute;
+  top: 25%;
+  right: 32%;
+  width: 86px;
+  height: 88px;
+  background-size: cover; /* 이미지가 버튼 크기에 맞게 조정됩니다 */
+  background-position: center; /* 이미지가 버튼의 중앙에 위치하도록 조정됩니다 */
+  border: none; /* 표준 버튼 테두리 제거 */
+  cursor: pointer; /* 마우스 오버 시 커서 변경 */
+  outline: none; /* 클릭 시 생기는 외곽선 제거 */
+}
+.fuel {
+  background-image: url('../../assets/fuel.png'); /* 이미지 경로를 정확하게 지정하세요 */
+  position: absolute;
+  bottom: 14%;
+  left: 4.8%;
+  width: 130px;
+  height: 151px;
+  background-size: cover; /* 이미지가 버튼 크기에 맞게 조정됩니다 */
+  background-position: center; /* 이미지가 버튼의 중앙에 위치하도록 조정됩니다 */
+  border: none; /* 표준 버튼 테두리 제거 */
+  cursor: pointer; /* 마우스 오버 시 커서 변경 */
+  outline: none; /* 클릭 시 생기는 외곽선 제거 */
+  z-index: 5;
+}
+.fueltext {
+  position: absolute;
+  bottom: 15%;
+  left: 6.5%;
+  color: #202632c6;
+  font-size: 25px;
+  font-weight: bold;
+  z-index: 5;
+}
+.timemachine {
+  background-image: url('../../assets/storytimemachine.png'); /* 이미지 경로를 정확하게 지정하세요 */
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  width: 217.5px; /* 원래 값의 약 1.5배 */
+  height: 316.5px; /* 원래 값의 약 1.5배 */
+  background-size: cover; /* 이미지가 버튼 크기에 맞게 조정됩니다 */
+  background-position: center; /* 이미지가 버튼의 중앙에 위치하도록 조정됩니다 */
+  border: none; /* 표준 버튼 테두리 제거 */
+  cursor: pointer; /* 마우스 오버 시 커서 변경 */
+  outline: none; /* 클릭 시 생기는 외곽선 제거 */
+  z-index: 2;
+}

@@ -1,0 +1,125 @@
+.storyContainer {
+  display: flex; /* Flexbox layout을 사용 */
+  flex-direction: column; /* 자식 요소들을 세로로 정렬 */
+  align-items: center; /* 가운데 정렬 */
+  justify-content: center; /* 가운데 정렬 */
+  width: 100%;
+  height: 100%; /* 화면의 전체 높이 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  overflow: hidden; /* 스크롤바 없애기 */
+}
+
+.backgroundImage {
+  position: absolute; /* 배경 이미지를 절대 위치로 수정 */
+  top: 0;
+  left: 0;
+  background-size: cover; /* 배경 이미지가 화면을 꽉 채우도록 */
+  background-position: center; /* 이미지를 중앙에 위치 */
+  width: 100%;
+  height: 100%; /* 전체 높이를 차지하도록 변경 */
+  z-index: -1; /* 배경으로 보내기 */
+}
+
+.storyNavigation {
+  position: absolute;
+  bottom: 3vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 22vh;
+  margin: 0 0;
+  background-color: rgba(39, 39, 39, 0.768);
+  border-radius: 5px;
+  /* background-color: #f0f0f0; */
+}
+
+.textfield {
+  margin: 0 10px;
+  padding: 10px;
+  text-align: center; /* 텍스트를 가로 방향으로 중앙 정렬 */
+  height: auto; /* 높이를 자동으로 설정하여 내용에 맞춤 */
+  color: rgba(255, 255, 255, 0.848);
+  font-size: 30px;
+  line-height: 6vh; /* 줄 간격 조절 */
+  display: block; /* 기본값이며, 필요에 따라 명시할 수 있음 */
+}
+.grayscale {
+  filter: grayscale(65%);
+}
+.grandpa {
+  background-image: url('@/assets/grandpa.png'); /* 이미지 경로를 정확하게 지정하세요 */
+  position: absolute;
+  bottom: 0vh;
+  left: 1%;
+  width: 410px;
+  height: 498px;
+  overflow: hidden; /* 스크롤바 없애기 */
+}
+.boy {
+  background-image: url('@/assets/boy.png'); /* 이미지 경로를 정확하게 지정하세요 */
+  position: absolute;
+  bottom: 0vh;
+  right: 5%;
+  width: 390px;
+  height: 570px;
+  overflow: hidden; /* 스크롤바 없애기 */
+}
+.timemachine {
+  position: absolute;
+  top: 10vh;
+  right: 34%;
+  width: auto; /* 가로 크기를 자동으로 조정하려면 auto로 설정 */
+  height: 90vh; /* 화면 높이의 일정 비율로 높이 설정 */
+  overflow: hidden;
+  object-fit: contain; /* 이미지 비율을 유지하면서 컨테이너에 맞게 조정 */
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-730px);
+  }
+}
+
+.animateup {
+  animation: slideUp 3s ease-in-out forwards;
+}
+.timemachinemove {
+  background-image: url('@/assets/storytimemachine.png'); /* 이미지 경로를 정확하게 지정하세요 */
+  position: absolute;
+  top: 12%;
+  right: 40%;
+  width: 469px;
+  height: 643px;
+  animation: slideUp 3s ease-in-out forwards;
+}
+.buttonstyle {
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 50px;
+  height: 22px;
+  font-size: 17px;
+  background-color: '#0064FF';
+  border-radius: 3;
+  font-weight: 600;
+}
+
+.ButtonImage {
+  width: 8vh; /* 이미지의 너비를 40%로 설정 */
+  height: auto; /* 세로 크기를 자동 조정하여 비율 유지 */
+}
+
+.prevButton {
+  position: absolute !important;
+  bottom: 0;
+  left: 10px; /* 왼쪽 정렬 */
+}
+.nextButton {
+  position: absolute !important;
+  bottom: 0;
+  right: 10px; /* 오른쪽 정렬 */
+}

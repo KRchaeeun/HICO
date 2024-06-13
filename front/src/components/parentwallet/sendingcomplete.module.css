@@ -1,0 +1,71 @@
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 140px;
+  width: 80%;
+  margin-bottom: 45px;
+}
+
+.icon {
+  margin-top: 110px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.materialContainer {
+  width: 100%;
+  max-width: 490px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 90px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.maintext1 {
+  color: #585865;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 60px;
+  margin-bottom: 8px;
+}
+
+.maintext2 {
+  color: #585865;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.subtext {
+  color: #0064ff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* 스크롤바 너비 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc; /* 스크롤바 색상 */
+  border-radius: 4px; /* 스크롤바 둥글게 */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* 스크롤바 배경 색상 */
+}

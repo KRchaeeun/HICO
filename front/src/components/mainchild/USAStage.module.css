@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap');
+
+body {
+  /* background-image: url('../../assets/forest.jpg'); */
+  background-image: url('../../assets/back.png');
+
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
+  flex-direction: column; /* 자식 요소를 수직 방향으로 배치 */
+  height: 100vh; /* 화면 전체 높이 */
+  overflow: hidden;
+}
+
+/* 화면 전체 */
+.title {
+  /* font-family: 'Just Me Again Down Here'; */
+  font-size: 8vh;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 7vh;
+  color: #484854;
+}
+
+.topic {
+  margin: 0;
+  padding-bottom: 10px;
+  color: #202632;
+  font-size: 4.5vh;
+  font-weight: bold;
+}
+
+.characterImage {
+  width: 35vh;
+  height: auto;
+  padding-top: 3.5vh;
+  padding-bottom: 3vh;
+}
+
+/* 구름 스타일 추가 */
+.cloudContainer {
+  position: absolute;
+  bottom: 50; /* 하단에 배치 */
+  left: 50;
+  width: 120vh;
+  height: 90vh; /* 구름의 높이 */
+  overflow: hidden; /* 내부 요소가 범위를 넘어갈 경우 숨김 */
+}
+
+.cloud {
+  position: relative;
+  min-width: 100%; /* 구름이 화면 너비보다 넓게 설정 */
+  height: 100%;
+  background: #ffffffd7;
+  border-radius: 10%;
+  z-index: -1;
+}

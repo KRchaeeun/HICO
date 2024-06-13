@@ -1,0 +1,93 @@
+.container {
+    display: flex;
+    border : none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-height: 600px; /* 높이를 제한 */
+    overflow-y: auto; /* 세로 스크롤 표시 */
+    overflow-x: hidden; /* 가로 스크롤 숨김 */
+}
+
+
+.historycontent {
+    width: 100%; /* 컨테이너 너비에 맞춰 조정 */
+    max-width: 580px; /* 최대 너비 제한 */
+    background-color: #ffffff; /* 카드 배경색 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 그림자 효과 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    margin-bottom: 20px; /* 카드 간 간격 */
+    padding: 15px; /* 내부 패딩 */
+    display: flex;
+    flex-direction: column;
+}
+
+.date {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px; /* 날짜와 상세 정보 사이의 간격 */
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.subdetail1 {
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.subdetail2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* 항목을 가로로 중앙 정렬 */
+    width: 100%; /* 전체 너비 사용 */
+}
+
+.sub2text1 {
+    display: flex; /* 로띠 이미지와 텍스트를 가로 방향으로 배열 */
+    align-items: center; /* 세로 방향에서 중앙 정렬 */
+    color: #666; /* 회색으로 변경 */
+    font-weight: bold;
+}
+
+
+.sub2text1 {
+    color: #666; /* 회색으로 변경 */
+    text-align: right; /* 오른쪽 정렬 */
+    font-weight: bold;
+}
+
+/* 스크롤바 스타일 */
+.main2::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main2::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.main2::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+/* 컨테이너의 세로 스크롤바 스타일 */
+.container::-webkit-scrollbar {
+    width: 8px; /* 스크롤바 너비 */
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #ccc; /* 스크롤바 색상 */
+    border-radius: 4px; /* 스크롤바 둥글게 */
+}
+
+.container::-webkit-scrollbar-track {
+    background: #f0f0f0; /* 스크롤바 배경 색상 */
+}
+.noDataMessage{
+    font-weight: bold;
+}

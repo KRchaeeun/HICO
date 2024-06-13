@@ -1,0 +1,135 @@
+.card {
+  display: 'flex';
+  justify-content: 'space-between';
+  align-items: 'center';
+  margin: '10px';
+  padding: '10px';
+  width: 700px;
+  height: 100px;
+}
+.flag {
+  width: '50px';
+  height: 'auto';
+  margin-right: '10px';
+}
+.currencyInfo {
+  flex-grow: 1;
+}
+.header {
+  display: 'flex';
+  justify-content: 'space-between';
+  margin-bottom: 15px;
+}
+
+.currencycontainer {
+  padding-top: 40px;
+  background-color: #f1f3f7;
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+
+.header {
+  font-size: 38px;
+  color: #202632;
+  font-weight: bold;
+}
+
+.subhead {
+  width: 45vw;
+  text-align: right;
+  color: #585865;
+  font-weight: bold;
+  font-size: clamp(14px, 1.3vw, 20px);
+  padding-bottom: 10px;
+}
+
+.maindiv {
+  margin-left: 70px;
+  margin-right: 70px;
+  width: 45vw;
+}
+
+.col1,
+.col2 {
+  display: flex;
+  align-items: center;
+}
+
+.col1 {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.col2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.row0 {
+  font-size: clamp(14px, 2vw, 26px);
+  font-weight: bold;
+  color: #585865;
+}
+
+.col2 {
+  margin-right: 2.5vw;
+}
+
+@media (max-width: 1200px) {
+  .col2 {
+    margin-right: 0px;
+  }
+}
+
+.row1 {
+  font-size: clamp(16px, 2vw, 26px);
+  font-weight: bold;
+  color: #585865;
+}
+
+.row2red,
+.row2blue {
+  font-size: clamp(12px, 2vw, 22px);
+}
+
+.row2red {
+  color: #ff4343;
+}
+
+.row2blue {
+  color: #0064ff;
+}
+
+.rightContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 1.6vw;
+}
+
+.countryInfo {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.countryInfo1 {
+  display: flex;
+  align-items: center;
+  margin-left: 35px;
+}
+.modal {
+  display: flex;
+  align-items: center;
+}
+.rightAlignContainer {
+  display: flex;
+  font-weight: bold;
+  justify-content: flex-end;
+  width: 100%; /* 부모 컨테이너의 전체 너비를 사용합니다. */
+}

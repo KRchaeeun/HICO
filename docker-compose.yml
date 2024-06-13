@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  database:
+    image: mysql:latest
+    container_name: mysql-hico
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      #LC_ALL=C: UTF-8
+    ports:
+      - "127.0.0.1:3306:3306"
+  backend:
+    container_name: backend
+    build:
+      context: ./back
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "127.0.0.1:8081:8081"
+    environment:
+      TZ: Asia/Seoul
+    depends_on:
+      - database
+  frontend:
+    container_name: frontend
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      - backend
+networks:
+  default:
+    name: hico_net
+    external: true

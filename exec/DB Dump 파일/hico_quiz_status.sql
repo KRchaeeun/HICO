@@ -1,0 +1,59 @@
+-- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: hico
+-- ------------------------------------------------------
+-- Server version	8.0.36
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `quiz_status`
+--
+
+DROP TABLE IF EXISTS `quiz_status`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `quiz_status` (
+  `is_correct` bit(1) DEFAULT NULL,
+  `create_time` datetime(6) DEFAULT NULL,
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `member_id` bigint DEFAULT NULL,
+  `quiz_id` bigint DEFAULT NULL,
+  `updated_time` datetime(6) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKl4hjinosjel5kb33y2pkiklye` (`member_id`),
+  KEY `FK6p5t158jgy5bnp3fg41u0177d` (`quiz_id`),
+  CONSTRAINT `FK6p5t158jgy5bnp3fg41u0177d` FOREIGN KEY (`quiz_id`) REFERENCES `quiz` (`id`),
+  CONSTRAINT `FKl4hjinosjel5kb33y2pkiklye` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `quiz_status`
+--
+
+LOCK TABLES `quiz_status` WRITE;
+/*!40000 ALTER TABLE `quiz_status` DISABLE KEYS */;
+INSERT INTO `quiz_status` VALUES (_binary '','2024-04-01 15:47:23.748583',11,6,41,'2024-04-01 15:47:23.748583'),(_binary '','2024-04-01 15:47:23.749577',12,6,42,'2024-04-01 15:47:23.749577'),(_binary '','2024-04-01 15:47:23.751585',13,6,43,'2024-04-01 15:47:23.751585'),(_binary '','2024-04-01 15:47:23.752577',14,6,44,'2024-04-01 15:47:23.752577'),(_binary '','2024-04-01 15:47:23.754576',15,6,45,'2024-04-01 15:47:23.754576'),(_binary '','2024-04-01 15:47:23.755576',16,6,46,'2024-04-01 15:47:23.755576'),(_binary '','2024-04-01 15:47:23.756584',17,6,47,'2024-04-01 15:47:23.756584'),(_binary '','2024-04-01 15:47:23.758576',18,6,48,'2024-04-01 15:47:23.758576'),(_binary '','2024-04-01 15:47:23.759576',19,6,49,'2024-04-01 15:47:23.759576'),(_binary '','2024-04-01 15:47:23.760584',20,6,50,'2024-04-01 15:47:23.760584');
+/*!40000 ALTER TABLE `quiz_status` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-04-02 17:46:00
